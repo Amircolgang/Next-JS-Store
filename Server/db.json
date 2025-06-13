@@ -14,6 +14,21 @@
             "id" : 3 ,
             "title" : "Next JS"
             , "price" : 1250000
+        },
+        {
+            "id" :4 ,
+            "title" : "Vanila JS"
+            , "price" : 25000
+        },
+        {
+            "id" : 5 ,
+            "title" : "PHP"
+            , "price" : 60000
+        },
+        {
+            "id" : 6 ,
+            "title" : "Next JS"
+            , "price" : 1250000
         }
     ]
 }
