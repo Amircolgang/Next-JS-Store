@@ -1,5 +1,9 @@
 const About = ({}) => {
-  return <div></div>
+  return (
+    <>
+        Abot
+    </>
+  )
 }
 
 export default About
