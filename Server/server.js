@@ -19,7 +19,13 @@ const server = http.createServer((req , res ) => {
         })
     }
 
-    if(req.method == "POS")
+    if(req.method == "POST" , req.url.startsWith('/api/users')){
+        req.on('data' , (data) => {
+            console.log(JSON.parse(data))
+        })
+
+        res.end("OK")
+    }
 })
 
 server.listen(port, () => {
