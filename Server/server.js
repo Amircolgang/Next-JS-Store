@@ -8,12 +8,14 @@ let hostname = 'amirShirazi.ir'
 const server = http.createServer((req , res ) => {
 
     if(req.method == "GET" && req.url.startsWith('/api/project')){
-        fs.readFile("db.json" , (err) => {
+        fs.readFile("db.json" , (err , db) => {
             if(err){
                 throw err
             }
-
-            res.w
+            const data = JSON.parse(db)
+            res.writeHead(200 , {'Content-Type' :  "application/json" })
+            res.write(JSON.stringify(data.project))
+            res.end()
         })
     }
 })
