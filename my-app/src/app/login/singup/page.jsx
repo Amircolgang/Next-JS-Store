@@ -18,14 +18,11 @@ const SingUp = ({ }) => {
   }
 
   const sendNewUser = () => {
-    fetch("localhost:3030/api/users",
-      {
-        headers: { "Content-Type": "application/json" }
-        ,
-        body: JSON.stringify(newUser)
-      }
-
-    )
+    fetch("https://example.org/post", {
+      method: "POST",
+      body: JSON.stringify(newUser),
+      // …
+    });
   }
 
 
@@ -58,19 +55,19 @@ const SingUp = ({ }) => {
                     <span>
                       Username
                     </span>
-                    <input className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl bg-[#ffffff]" type="text" placeholder="Enter your user name" />
+                    <input value={username} onChange={(e) => setUsername(e.target.value)} className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl bg-[#ffffff]" type="text" placeholder="Enter your user name" />
                   </div>
                   <div className="flex items-start flex-col gap-[0.25rem]">
                     <span>
                       Email
                     </span>
-                    <input value={setemail} onChange={(e) => setemail(e.target.value)} className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl bg-[#ffffff]" type="text" placeholder="Enter your email" />
+                    <input value={email} onChange={(e) => setemail(e.target.value)} className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl bg-[#ffffff]" type="text" placeholder="Enter your email" />
                   </div>
                   <div className="flex flex-col gap-[.5rem]">
                     <span>
                       Password
                     </span>
-                    <input value={setPass} onChange={(e) => setPass(e.target.value)} className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl" type="text" placeholder="**********" />
+                    <input value={pass} onChange={(e) => setPass(e.target.value)} className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl" type="text" placeholder="**********" />
                   </div>
                 </div>
                 <div className="felx flex-col ">
