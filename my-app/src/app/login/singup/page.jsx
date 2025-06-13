@@ -6,19 +6,26 @@ import { useState } from "react"
 
 
 const SingUp = ({ }) => {
-  const [email , setemail ] = useState(' ')
-  const [name , setName ] = useState(' ')
-  const [pass , setPass ] = useState(' ')
-  const [username, setUsername  ] = useState(' ')
+  const [email, setemail] = useState(' ')
+  const [name, setName] = useState(' ')
+  const [pass, setPass] = useState(' ')
+  const [username, setUsername] = useState(' ')
   const newUser = {
-    email ,
-    name , 
-    username ,
+    email,
+    name,
+    username,
     pass
   }
-  
+
   const sendNewUser = () => {
-    fetch("/api/users")
+    fetch("localhost:3030/api/users",
+      {
+        headers: { "Content-Type": "application/json" }
+        ,
+        body: JSON.stringify(newUser)
+      }
+
+    )
   }
 
 
@@ -33,7 +40,7 @@ const SingUp = ({ }) => {
                 <div className="flex items-center justify-center w-[338px] h-[89px]">
                   <div className="text-center flex flex-col">
                     <span className="text-[34px] ">
-                       Sing Up  Page
+                      Sing Up  Page
                     </span >
                     <span className="text-[14px]">
                       Welcome back! Please enter your details.
@@ -77,7 +84,7 @@ const SingUp = ({ }) => {
                     </div>
                   </div>
                   <div className="flex flex-col gap-[.5rem] pt-[1.5rem]">
-                    <button className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] bg-[red] shadow-2xl">
+                    <button onClick={sendNewUser} className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] bg-[red] shadow-2xl">
                       Sing Up
                     </button>
                     <div className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem]  border-zinc-600 border-[1px] flex items-center justify-center shadow-2xl">
