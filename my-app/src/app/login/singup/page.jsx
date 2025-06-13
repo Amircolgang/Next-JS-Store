@@ -5,6 +5,15 @@ import Image from "next/image"
 import { useState } from "react"
 const SingUp = ({ }) => {
   const [email , setemail ] = useState(' ')
+  const [name , setName ] = useState(' ')
+  const [pass , setPass ] = useState(' ')
+  const [username, setUsername  ] = useState(' ')
+  const newUser = {
+    email ,
+    name , 
+    username ,
+    pass
+  }
   return (
     <>
       <div className="container m-auto">
@@ -28,7 +37,7 @@ const SingUp = ({ }) => {
                     <span>
                       Name
                     </span>
-                    <input className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl bg-[#ffffff]" type="text" placeholder="Enter your name" />
+                    <input value={name} onChange={(e) => setName(e.target.value)} className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl bg-[#ffffff]" type="text" placeholder="Enter your name" />
                   </div>
                   <div className="flex items-start flex-col gap-[0.25rem]">
                     <span>
