@@ -27,15 +27,15 @@ const server = http.createServer((req , res ) => {
         })
 
         req.on("end", () => {
-            const parsClientBooks = JSON.parse(clientBook)
+            const parsClientUser = JSON.parse(clientUser)
 
-            const newBook = {
-                id: global.crypto.randomUUID(), ...parsClientBooks, free: 1
+            const newUser = {
+                id: global.crypto.randomUUID(), ...parsClientUser, free: 1
             }
 
-            db.books.push(newBook)
+            db.books.push(newUser)
 
-            console.log(newBook)
+            console.log(newUser)
             fs.writeFile("db.json", JSON.stringify(db), (err) => {
                 if (err) {
                     throw err

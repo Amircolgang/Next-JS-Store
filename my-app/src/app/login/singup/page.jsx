@@ -21,9 +21,9 @@ const SingUp = ({ }) => {
     // fetch("https://example.org/post", {
     //   method: "POST",
     //   body: JSON.stringify(newUser),
-    //   // …
+    //   // … http://localhost:3000/login/singup
     // });
-    fetch('localhost:3030/api/users' , {
+    fetch('http://localhost:3030/api/users' , {
           method : "POST" ,
           body : JSON.stringify(newUser)
       }).then((res) => res.json())
@@ -86,7 +86,7 @@ const SingUp = ({ }) => {
                     </div>
                   </div>
                   <div className="flex flex-col gap-[.5rem] pt-[1.5rem]">
-                    <button onClick={sendNewUser} className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] bg-[red] shadow-2xl">
+                    <button onClick={() => sendNewUser()} className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] bg-[red] shadow-2xl">
                       Sing Up
                     </button>
                     <div className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem]  border-zinc-600 border-[1px] flex items-center justify-center shadow-2xl">
