@@ -7,8 +7,8 @@ let port = 8080
 let hostname = 'amirShirazi.ir'
 const server = http.createServer((req , res ) => {
 
-    if(req.method == "GET" && req.url.startsWith('')){
-
+    if(req.method == "GET" && req.url.startsWith('/api')){
+        res.end("ok")
     }
 })
 
