@@ -23,8 +23,8 @@ const server = http.createServer((req , res ) => {
         req.on('data' , (data) => {
             console.log(JSON.parse(data))
         })
-
-        res.end("OK")
+        res.write("Ok")
+        res.end()
     }
 })
 
