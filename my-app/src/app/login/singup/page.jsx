@@ -18,11 +18,16 @@ const SingUp = ({ }) => {
   }
 
   const sendNewUser = () => {
-    fetch("https://example.org/post", {
-      method: "POST",
-      body: JSON.stringify(newUser),
-      // …
-    });
+    // fetch("https://example.org/post", {
+    //   method: "POST",
+    //   body: JSON.stringify(newUser),
+    //   // …
+    // });
+    fetch('localhost:3030/api/users' , {
+          method : "POST" ,
+          body : JSON.stringify(newUser)
+      }).then((res) => res.json())
+        .then((resData) => console.log(resData))
   }
 
 
