@@ -8,6 +8,7 @@ import Header from "@/components/header";
 const Project = ({ }) => {
   // const item_data = item_dataFech()
   let item_data = json
+  // console.log(item_data)
   return (
     <>
       <Header/>

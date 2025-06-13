@@ -4,7 +4,7 @@ import NavBar from "@/components/Navabar"
 import Image from "next/image"
 import { useState } from "react"
 const SingUp = ({ }) => {
-  const [email , setemail ] = useState('')
+  const [email , setemail ] = useState(' ')
   return (
     <>
       <div className="container m-auto">
@@ -16,7 +16,7 @@ const SingUp = ({ }) => {
                 <div className="flex items-center justify-center w-[338px] h-[89px]">
                   <div className="text-center flex flex-col">
                     <span className="text-[34px] ">
-                      Sing Up  Page
+                       Sing Up  Page
                     </span >
                     <span className="text-[14px]">
                       Welcome back! Please enter your details.
