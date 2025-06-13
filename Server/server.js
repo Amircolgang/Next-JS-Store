@@ -4,4 +4,7 @@ const url = require("url")
 const db = require("./db.json")
 
 
-const server = h
+const server = http.createServer((req , res ) => {
+
+    if(req.method == "GET" && req.url.startsWith(''))
+})
