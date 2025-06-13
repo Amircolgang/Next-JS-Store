@@ -1,13 +1,14 @@
+import Image from "next/image"
 const SingIn = ({ }) => {
   return (
     <>
     <div>
-      <div>
-        <div>
+      <div className="w-[540px] h-[650px] bg-[#ffff]">
+        <div className="flex items-center justify-center w-[338px] h-[89px]">
           <div>
-            <span>
+            <span className="text-[34px] ">
               Welcome back
-            </span>
+            </span text>
             <span>
               Welcome back! Please enter your details.
             </span>
@@ -51,7 +52,14 @@ const SingIn = ({ }) => {
           </div>
         </div>
       </div>
-
+      <div>
+        <Image 
+        alt="singin"
+          width={559}
+          height={777}
+          src={'/images/Singin.png'}
+        />
+      </div>
     </div>
     </>
   )
