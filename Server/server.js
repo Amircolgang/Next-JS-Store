@@ -18,6 +18,8 @@ const server = http.createServer((req , res ) => {
             res.end()
         })
     }
+
+    if(req.method == "POS")
 })
 
 server.listen(port, () => {
