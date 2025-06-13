@@ -1,7 +1,7 @@
 const http = require("node:http")
-const fs = require("fs")
-const url = require("url")
-const db = require("./db.json")
+// const fs = require("fs")
+// const url = require("url")
+// const db = require("./db.json")
 
 let port = 8080
 let hostname = 'amirShirazi.ir'
@@ -12,6 +12,6 @@ const server = http.createServer((req , res ) => {
     }
 })
 
-server.listen(port, hostname, () => {
+server.listen(port, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
   });
