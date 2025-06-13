@@ -5,31 +5,31 @@ const SingIn = ({ }) => {
     <div>
       <div className="w-[540px] h-[650px] bg-[#ffff]">
         <div className="flex items-center justify-center w-[338px] h-[89px]">
-          <div>
+          <div className="text-center">
             <span className="text-[34px] ">
               Welcome back
-            </span text>
-            <span>
+            </span >
+            <span className="text-[14px]">
               Welcome back! Please enter your details.
             </span>
           </div>
         </div>
-        <div>
-          <div>
+        <div className="flex flex-col gap-[1.5rem]">
+          <div className="flex items-start flex-col gap-[0.5rem]">
             <span>
               Email
             </span>
-            <input type="text" placeholder="Enter your email" />
+            <input className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl" type="text" placeholder="Enter your email" />
           </div>
-          <div>
+          <div className="flex flex-col gap-[1.5rem]">
             <span>
               Password
             </span>
-            <input type="text" placeholder="**********" />
+            <input className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl" type="text" placeholder="**********" />
           </div>
         </div>
         <div>
-          <div>
+          <div className="flex flex-col justify-between">
             <div>
               <input type="checkbox" name="" id="" />
               <span>Remember me</span>
@@ -39,9 +39,9 @@ const SingIn = ({ }) => {
             </div>
           </div>
           <div>
-            <button></button>
-            <div>
-              <span>
+            <button className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl">Sing in</button>
+            <div className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl">
+              <span >
                 Sign in with Google
               </span>
             </div>
