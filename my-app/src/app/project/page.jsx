@@ -2,12 +2,14 @@ import Image from "next/image"
 
 const feschData  =  fetch('http://localhost:3030/api/project')
 let item_dataFech = async () => {
-  let data = await feschData.then( res => res.json())
+  let data = ''
+  await feschData.then( res =>data = res.json())
   return data
 } 
 
 const Project = ({ }) => {
-  const item_data = item_dataFech
+  const item_data = item_dataFech()
+  console.log(item_data)
   return (
     <>
     <div>
