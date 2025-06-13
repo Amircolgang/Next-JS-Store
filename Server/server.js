@@ -1,7 +1,7 @@
 const http = require("node:http")
 const fs = require("fs")
 // const url = require("url")
-// const db = require("./db.json")
+const db = require("./db.json")
 
 let port = 3030
 let hostname = 'amirShirazi.ir'
@@ -19,12 +19,35 @@ const server = http.createServer((req , res ) => {
         })
     }
 
-    if(req.method == "POST" , req.url.startsWith('/api/users')){
-        req.on('data' , (data) => {
-            console.log(JSON.parse(data))
+    if (req.method == "POST" && req.url.startsWith("/api/users")) {
+        let clientBook = ""
+
+        req.on("data", (data) => {
+            clientBook = clientBook + data.toString()
         })
-        res.write("Ok")
-        res.end()
+
+        req.on("end", () => {
+            const parsClientBooks = JSON.parse(clientBook)
+
+            const newBook = {
+                id: global.crypto.randomUUID(), ...parsClientBooks, free: 1
+            }
+
+            db.books.push(newBook)
+
+            console.log(newBook)
+            fs.writeFile("db.json", JSON.stringify(db), (err) => {
+                if (err) {
+                    throw err
+                }
+
+                res.writeHead(200, { "Content-Type": "application/json" });
+                res.write(JSON.stringify({ message: "New Book Is succes Fully :)" }));
+                res.end();
+            })
+
+
+        })
     }
 })
 
