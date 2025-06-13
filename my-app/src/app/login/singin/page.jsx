@@ -2,11 +2,11 @@ import Image from "next/image"
 const SingIn = ({ }) => {
   return (
     <>
-      <div className="w-[1080px] h-[1080px]">
-        <div className="w-[540px] h-[650px] bg-[#ffff]">
-          <div className="w-[311px] flex flex-col">
+      <div className="w-[1080px] h-[1080px] flex">
+        <div className="w-[540px] h-[650px] bg-[#ffff] ">
+          <div className="w-[311px] flex flex-col gap-[1.5rem]">
             <div className="flex items-center justify-center w-[338px] h-[89px]">
-              <div className="text-center">
+              <div className="text-center flex flex-col">
                 <span className="text-[34px] ">
                   Welcome back
                 </span >
@@ -15,21 +15,21 @@ const SingIn = ({ }) => {
                 </span>
               </div>
             </div>
-            <div className="flex flex-col gap-[1.5rem]">
-              <div className="flex items-start flex-col gap-[0.5rem]">
+            <div className="flex flex-col gap-[.5rem]">
+              <div className="flex items-start flex-col gap-[0.25rem]">
                 <span>
                   Email
                 </span>
                 <input className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl" type="text" placeholder="Enter your email" />
               </div>
-              <div className="flex flex-col gap-[1.5rem]">
+              <div className="flex flex-col gap-[.5rem]">
                 <span>
                   Password
                 </span>
                 <input className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl" type="text" placeholder="**********" />
               </div>
             </div>
-            <div>
+            <div className="felx flex-col gap-5">
               <div className="flex justify-between">
                 <div>
                   <input type="checkbox" name="" id="" />
