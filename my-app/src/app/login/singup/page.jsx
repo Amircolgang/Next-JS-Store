@@ -3,6 +3,8 @@
 import NavBar from "@/components/Navabar"
 import Image from "next/image"
 import { useState } from "react"
+
+
 const SingUp = ({ }) => {
   const [email , setemail ] = useState(' ')
   const [name , setName ] = useState(' ')
@@ -14,6 +16,12 @@ const SingUp = ({ }) => {
     username ,
     pass
   }
+  
+  const sendNewUser = () => {
+    fetch("/api/users")
+  }
+
+
   return (
     <>
       <div className="container m-auto">
@@ -49,13 +57,13 @@ const SingUp = ({ }) => {
                     <span>
                       Email
                     </span>
-                    <input className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl bg-[#ffffff]" type="text" placeholder="Enter your email" />
+                    <input value={setemail} onChange={(e) => setemail(e.target.value)} className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl bg-[#ffffff]" type="text" placeholder="Enter your email" />
                   </div>
                   <div className="flex flex-col gap-[.5rem]">
                     <span>
                       Password
                     </span>
-                    <input className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl" type="text" placeholder="**********" />
+                    <input value={setPass} onChange={(e) => setPass(e.target.value)} className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl" type="text" placeholder="**********" />
                   </div>
                 </div>
                 <div className="felx flex-col ">
