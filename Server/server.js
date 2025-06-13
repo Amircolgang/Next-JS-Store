@@ -20,10 +20,10 @@ const server = http.createServer((req , res ) => {
     }
 
     if (req.method == "POST" && req.url.startsWith("/api/users")) {
-        let clientBook = ""
+        let clientUser = ""
 
         req.on("data", (data) => {
-            clientBook = clientBook + data.toString()
+            clientUser = clientUser + data.toString()
         })
 
         req.on("end", () => {
