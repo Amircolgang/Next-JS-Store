@@ -1,6 +1,10 @@
+'use client'
+
 import NavBar from "@/components/Navabar"
 import Image from "next/image"
+import { useState } from "react"
 const SingUp = ({ }) => {
+  const [email , setemail ] = useState('')
   return (
     <>
       <div className="container m-auto">
@@ -28,9 +32,9 @@ const SingUp = ({ }) => {
                   </div>
                   <div className="flex items-start flex-col gap-[0.25rem]">
                     <span>
-                      Email
+                      Username
                     </span>
-                    <input className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl bg-[#ffffff]" type="text" placeholder="Enter your email" />
+                    <input className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl bg-[#ffffff]" type="text" placeholder="Enter your user name" />
                   </div>
                   <div className="flex items-start flex-col gap-[0.25rem]">
                     <span>
@@ -59,7 +63,7 @@ const SingUp = ({ }) => {
                     <button className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] bg-[red] shadow-2xl">
                       Sing Up
                     </button>
-                    <div className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] border-zinc-600 border-[1px] flex items-center justify-center shadow-2xl">
+                    <div className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem]  border-zinc-600 border-[1px] flex items-center justify-center shadow-2xl">
                       <span >
                         Sign Up with Google
                       </span>
