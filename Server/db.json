@@ -2,22 +2,22 @@
     "project" : [
         {
             "id" : 1 ,
-            "title" : "node JS"
+            "title" : "nodeJS"
             , "price" : 25000
         },
         {
             "id" : 2 ,
-            "title" : "Nust JS"
+            "title" : "NustJS"
             , "price" : 60000
         },
         {
             "id" : 3 ,
-            "title" : "Next JS"
+            "title" : "NextJS"
             , "price" : 1250000
         },
         {
             "id" :4 ,
-            "title" : "Vanila JS"
+            "title" : "VanilaJS"
             , "price" : 25000
         },
         {
