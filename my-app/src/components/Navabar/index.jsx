@@ -15,8 +15,15 @@ const NavBar = ({ }) => {
                     <span className="text-[23px]">Dsign</span>
                 </div>
                 <div className="flex items-center justify-around w-[457px] h-[27px] text-[20px]">
+                    <Link
+                    href={'/'}
+                    >
                     <span>Home</span>
+                    </Link>
+                    <Link
+                    href={'/services'}>
                     <span>Services</span>
+                    </Link>
                     <Link
                         href={'/project'}
                     >
