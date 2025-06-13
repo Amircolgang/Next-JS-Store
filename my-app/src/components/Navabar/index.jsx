@@ -1,6 +1,6 @@
 import Image from "next/image"
 import LoginSingUp from "../Sing-Login"
-             
+import Link from "next/link"    
 const NavBar = ({ }) => {
     return (
         <div className="containerm m-auto">
@@ -17,9 +17,23 @@ const NavBar = ({ }) => {
                 <div className="flex items-center justify-around w-[457px] h-[27px] text-[20px]">
                     <span>Home</span>
                     <span>Services</span>
+                    <Link
+                        href={'/project'}
+                    >
                     <span>Project</span>
+                    </Link>
+                    <Link
+                        href={'about'}
+                    >
                     <span>About</span>
+                    
+                    </Link>
+                    <Link
+                        href={'about'}
+                    >
                     <span>Help</span>
+                    
+                    </Link>
                 </div>
                 <div>
                 <LoginSingUp />
