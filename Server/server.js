@@ -17,9 +17,7 @@ const server = http.createServer((req , res ) => {
             res.write(JSON.stringify(data.project))
             res.end()
         })
-    }
-
-    if (req.method == "POST" && req.url.startsWith("/api/users")) {
+    }else if (req.method == "POST" && req.url.startsWith("/api/users")) {
         let clientUser = ""
 
         req.on("data", (data) => {
