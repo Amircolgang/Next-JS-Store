@@ -6,10 +6,10 @@ import { useState } from "react"
 
 
 const SingUp = ({ }) => {
-  const [email, setemail] = useState(' ')
-  const [name, setName] = useState(' ')
-  const [pass, setPass] = useState(' ')
-  const [username, setUsername] = useState(' ')
+  const [email, setemail] = useState()
+  const [name, setName] = useState()
+  const [pass, setPass] = useState()
+  const [username, setUsername] = useState()
   const newUser = {
     email,
     name,

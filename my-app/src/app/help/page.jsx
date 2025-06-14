@@ -1,7 +1,13 @@
+import NavBar from "@/components/Navabar"
 const Help = ({}) => {
   return (
     <>
-        Help
+      <div className="container m-auto">
+        <NavBar />
+        <div>
+          Help
+        </div>
+      </div>
     </>
   )
 }

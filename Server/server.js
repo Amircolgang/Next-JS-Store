@@ -31,7 +31,7 @@ const server = http.createServer((req , res ) => {
                 id: global.crypto.randomUUID(), ...parsClientUser, free: 1
             }
 
-            db.books.push(newUser)
+            db.users.push(newUser)
 
             console.log(newUser)
             fs.writeFile("db.json", JSON.stringify(db), (err) => {

@@ -30,13 +30,13 @@ const NavBar = ({ }) => {
                     <span>Project</span>
                     </Link>
                     <Link
-                        href={'about'}
+                        href={'/about'}
                     >
                     <span>About</span>
                     
                     </Link>
                     <Link
-                        href={'about'}
+                        href={'/help'}
                     >
                     <span>Help</span>
                     
