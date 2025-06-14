@@ -3,7 +3,9 @@ const SlugerPrudoct = ({ params }) => {
     console.log(slug)
     return (
     <>
-
+        {
+            
+        }
     </>
   )
 }
