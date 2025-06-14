@@ -6,7 +6,7 @@ import NavBar from "@/components/Navabar"
 const SingIn = ({ }) => {
     const [email, setemail] = useState('')
     const [pass, setPass] = useState('')
-    let show = true
+    let show = false
     const newUser = {
       email,
       pass
@@ -22,9 +22,18 @@ const SingIn = ({ }) => {
             method : "POST" ,
             body : JSON.stringify(newUser)
         }).then((res) => res.json())
-          .then((resData) => res =resData)
-    }
-  
+          .then((resData) => {
+            console.log(resData)
+            res = resData.message
+            show = true
+          })
+          
+          
+        }
+       if() setTimeout(()=>{
+          show = false
+        } , 2000)
+    
   return (
     <>
       <div className="container m-auto">
