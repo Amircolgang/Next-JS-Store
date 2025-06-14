@@ -5,12 +5,12 @@ const SlugerPrudoct = ({ params }) => {
     let {slug} = params
     // console.log(slug)
     let categor = json[0].category
+    let data  = categor[slug[0]]
     
+    console.log( data)        
     return (
     <>
-        {
-            categor.map((item) => item )        
-        }
+        
     </>
   )
 }
