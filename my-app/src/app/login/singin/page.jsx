@@ -170,9 +170,9 @@ const SingIn = () => {
     <>
       <div className="container m-auto">
         {
-          resPons && 
-          <NavBar {...resPons}  /> :
-        }
+           resPons &&
+           <NavBar {...resPons}  /> 
+        } 
 
         {showAlert && (
           <Alert
