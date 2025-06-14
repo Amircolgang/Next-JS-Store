@@ -166,11 +166,13 @@ const SingIn = () => {
         setTimeout(() => setShowAlert(false), 3000)
       })
   }
-
+  if(resPons == undefined){
+    console.log("ok")
+  }
   return (
     <>
       <div className="container m-auto">
-        <NavBar />
+        <NavBar  />
         {showAlert && (
           <Alert
             type={alertType}
