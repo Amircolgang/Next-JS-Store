@@ -7,6 +7,7 @@ const SingIn = ({ }) => {
   const [email, setemail] = useState('')
   const [pass, setPass] = useState('')
   let show = false
+  let a = true
   const newUser = {
     email,
     pass
@@ -25,27 +26,29 @@ const SingIn = ({ }) => {
       .then((resData) => {
         console.log(resData)
         res = resData.message
-        console.log(res)
-      }).then()
+        a = true
+        console.log(a)
+      })
 
 
   }
   if (show) {
     setTimeout(() => {
-      show = false
+      a = false
     }, 2000)
   }
+  show = true
 
   return (
     <>
       <div className="container m-auto">
         <NavBar />
         {
-          show
+          a
           &&
           <Alert
             type="success"
-            message={res}
+            message={`${res}`}
             onClose={() => setShow(false)}
           />
         }
