@@ -4,49 +4,51 @@ import { useState } from "react"
 import Image from "next/image"
 import NavBar from "@/components/Navabar"
 const SingIn = ({ }) => {
-    const [email, setemail] = useState('')
-    const [pass, setPass] = useState('')
-    let show = false
-    const newUser = {
-      email,
-      pass
-    }
-    let res = ''
-    const sendNewUser = () => {
-      // fetch("https://example.org/post", {
-      //   method: "POST",
-      //   body: JSON.stringify(newUser),
-      //   // … http://localhost:3000/login/singup
-      // });
-      fetch('http://localhost:3030/api/login/singin' , {
-            method : "POST" ,
-            body : JSON.stringify(newUser)
-        }).then((res) => res.json())
-          .then((resData) => {
-            console.log(resData)
-            res = resData.message
-            show = true
-          })
-          
-          
-        }
-       if() setTimeout(()=>{
-          show = false
-        } , 2000)
-    
+  const [email, setemail] = useState('')
+  const [pass, setPass] = useState('')
+  let show = false
+  const newUser = {
+    email,
+    pass
+  }
+  let res = ''
+  const sendNewUser = () => {
+    // fetch("https://example.org/post", {
+    //   method: "POST",
+    //   body: JSON.stringify(newUser),
+    //   // … http://localhost:3000/login/singup
+    // });
+    fetch('http://localhost:3030/api/login/singin', {
+      method: "POST",
+      body: JSON.stringify(newUser)
+    }).then((res) => res.json())
+      .then((resData) => {
+        console.log(resData)
+        res = resData.message
+        console.log(res)
+      }).then()
+
+
+  }
+  if (show) {
+    setTimeout(() => {
+      show = false
+    }, 2000)
+  }
+
   return (
     <>
       <div className="container m-auto">
-      <NavBar />
-      {
-        show
-         &&
-        <Alert
+        <NavBar />
+        {
+          show
+          &&
+          <Alert
             type="success"
             message={res}
             onClose={() => setShow(false)}
           />
-      }
+        }
         <div className="flex items-center justify-center pt-[4.5rem]">
           <div className="w-fit  bg-[#fff] rounded-2xl shadow-2xl flex">
             <div className="w-[540px] h-[650px]  flex items-center justify-center">
