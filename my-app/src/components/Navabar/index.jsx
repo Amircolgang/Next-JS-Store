@@ -7,7 +7,7 @@ const NavBar = ({ props }) => {
     //         "User is Alredi hast"            
     //     )
     // }
-    console.log(props)
+    // console.log(props)
     return (
         <div className="containerm m-auto">
             <div className="flex items-center justify-between">
