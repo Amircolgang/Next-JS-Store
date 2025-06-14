@@ -133,6 +133,7 @@ import Image from "next/image"
 import NavBar from "@/components/Navabar"
 
 const SingIn = () => {
+  cons
   const [email, setEmail] = useState('')
   const [pass, setPass] = useState('')
   const [alertMsg, setAlertMsg] = useState('')
@@ -167,8 +168,7 @@ const SingIn = () => {
       })
   }
 
-  let itsUser = resPons != undefined ? resPons : false 
-  console.log(itsUser[0])
+  
   return (
     <>
       <div className="container m-auto">
