@@ -133,7 +133,7 @@ import Image from "next/image"
 import NavBar from "@/components/Navabar"
 
 const SingIn = () => {
-  cons
+  const []
   const [email, setEmail] = useState('')
   const [pass, setPass] = useState('')
   const [alertMsg, setAlertMsg] = useState('')
