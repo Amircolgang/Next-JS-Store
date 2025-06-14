@@ -138,7 +138,7 @@ const SingIn = () => {
   const [alertMsg, setAlertMsg] = useState('')
   const [alertType, setAlertType] = useState('info')
   const [showAlert, setShowAlert] = useState(false)
-
+  const [resPons , setResPons] = useState('')
   const sendNewUser = () => {
     fetch('http://localhost:3030/api/login/singin', {
       method: "POST",
@@ -147,6 +147,7 @@ const SingIn = () => {
     })
       .then((res) => res.json())
       .then((resData) => {
+        setResPons(resData.user)
         if (resData.message) {
           setAlertMsg(resData.message)
           setAlertType('success')
@@ -168,7 +169,7 @@ const SingIn = () => {
   return (
     <>
       <div className="container m-auto">
-        <NavBar />
+        <NavBar {...resPons} />
         {showAlert && (
           <Alert
             type={alertType}

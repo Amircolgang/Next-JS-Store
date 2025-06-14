@@ -1,7 +1,7 @@
 import Image from "next/image"
 import LoginSingUp from "../Sing-Login"
 import Link from "next/link"    
-const NavBar = ({ }) => {
+const NavBar = ({ props }) => {
     return (
         <div className="containerm m-auto">
             <div className="flex items-center justify-between">
@@ -43,7 +43,7 @@ const NavBar = ({ }) => {
                     </Link>
                 </div>
                 <div>
-                <LoginSingUp />
+                <LoginSingUp {...props} />
                 </div>
             </div>
         </div>
