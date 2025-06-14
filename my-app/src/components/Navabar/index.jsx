@@ -2,6 +2,7 @@ import Image from "next/image"
 import LoginSingUp from "../Sing-Login"
 import Link from "next/link"    
 const NavBar = ({ props }) => {
+    let {}
     // if(props != undefined){
     //     console.log(
     //         "User is Alredi hast"            
@@ -49,7 +50,7 @@ const NavBar = ({ props }) => {
                     </Link>
                 </div>
                 <div>
-                <LoginSingUp {}  />
+                <LoginSingUp {[pr]}  />
                 </div>
             </div>
         </div>
