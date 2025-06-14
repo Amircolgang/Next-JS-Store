@@ -176,7 +176,6 @@ const SingIn = () => {
         {
            resPons &&
            <NavBar {...resPons}  /> 
-        } 
 
         {showAlert && (
           <Alert
