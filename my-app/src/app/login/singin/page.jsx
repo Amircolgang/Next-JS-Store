@@ -1,9 +1,29 @@
 "use client"
 
-
+import { useState } from "react"
 import Image from "next/image"
 import NavBar from "@/components/Navabar"
 const SingIn = ({ }) => {
+    const [email, setemail] = useState('')
+    const [pass, setPass] = useState('')
+    const newUser = {
+      email,
+      pass
+    }
+  
+    const sendNewUser = () => {
+      // fetch("https://example.org/post", {
+      //   method: "POST",
+      //   body: JSON.stringify(newUser),
+      //   // … http://localhost:3000/login/singup
+      // });
+      fetch('http://localhost:3030/api/users' , {
+            method : "POST" ,
+            body : JSON.stringify(newUser)
+        }).then((res) => res.json())
+          .then((resData) => console.log(resData))
+    }
+  
   return (
     <>
       <div className="container m-auto">
@@ -27,13 +47,13 @@ const SingIn = ({ }) => {
                     <span>
                       Email
                     </span>
-                    <input className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl bg-[#ffffff]" type="text" placeholder="Enter your email" />
+                    <input value={email} onChange={(e) => setemail(e.target.value)} className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl bg-[#ffffff]" type="text" placeholder="Enter your email" />
                   </div>
                   <div className="flex flex-col gap-[.5rem]">
                     <span>
                       Password
                     </span>
-                    <input className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl" type="text" placeholder="**********" />
+                    <input value={pass} onChange={(e) => setPass(e.target.value)} className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] shadow-2xl" type="text" placeholder="**********" />
                   </div>
                 </div>
                 <div className="felx flex-col ">
@@ -47,7 +67,7 @@ const SingIn = ({ }) => {
                     </div>
                   </div>
                   <div className="flex flex-col gap-[.5rem] pt-[1.5rem]">
-                    <button className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] bg-[red] shadow-2xl">Sing in</button>
+                    <button className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] bg-[red] shadow-2xl" onClick={(e) => sendNewUser()}>Sing in</button>
                     <div className="w-[313.97px] h-[41px] rounded-[12px] pl-[0.5rem] border-zinc-600 border-[1px] flex items-center justify-center shadow-2xl">
                       <span >
                         Sign in with Google
