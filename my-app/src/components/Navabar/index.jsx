@@ -1,14 +1,7 @@
 import Image from "next/image"
 import LoginSingUp from "../Sing-Login"
 import Link from "next/link"    
-const NavBar = ({ props }) => {
-    let {username} = props
-    // if(props != undefined){
-    //     console.log(
-    //         "User is Alredi hast"            
-    //     )
-    // }
-    console.log(username)
+const NavBar = ({pro }) => {
     return (
         <div className="containerm m-auto">
             <div className="flex items-center justify-between">
@@ -50,7 +43,7 @@ const NavBar = ({ props }) => {
                     </Link>
                 </div>
                 <div>
-                {/* <LoginSingUp {...username}  /> */}
+                <LoginSingUp />
                 </div>
             </div>
         </div>
