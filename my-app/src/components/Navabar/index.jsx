@@ -25,6 +25,9 @@ const NavBar = ({   }) => {
                     <span>Services</span>
                     </Link>
                     <Link
+
+
+
                         href={'/project'}
                     >
                     <span>Project</span>
