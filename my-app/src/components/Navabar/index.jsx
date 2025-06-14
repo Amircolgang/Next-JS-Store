@@ -43,7 +43,7 @@ const NavBar = ({   }) => {
                     </Link>
                 </div>
                 <div>
-                <LoginSingU p />
+                <LoginSingUp />
                 </div>
             </div>
         </div>
