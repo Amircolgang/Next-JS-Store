@@ -1,5 +1,5 @@
 import Link from "next/link"
-const LoginSingUp = ({  }) => {
+const LoginSingUp = ({ props }) => {
     // console.log()
     return (
         <>
