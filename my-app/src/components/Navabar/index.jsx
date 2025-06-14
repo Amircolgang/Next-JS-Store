@@ -2,7 +2,7 @@ import Image from "next/image"
 import LoginSingUp from "../Sing-Login"
 import Link from "next/link"    
 const NavBar = ({ props }) => {
-    let {}
+    let {username} = props
     // if(props != undefined){
     //     console.log(
     //         "User is Alredi hast"            
