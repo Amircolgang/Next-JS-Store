@@ -149,7 +149,7 @@ const SingIn = () => {
       .then((res) => res.json())
       .then((resData) => {
         setResPons(resData.user)
-        
+
         console.log(resPons)
         if (resData.message) {
           setAlertMsg(resData.message)
