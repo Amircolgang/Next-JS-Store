@@ -168,7 +168,7 @@ const SingIn = () => {
   }
 
   let itsUser = resPons != undefined ? resPons : false 
-  console.log(itsUser.)
+  console.log(itsUser[0])
   return (
     <>
       <div className="container m-auto">
