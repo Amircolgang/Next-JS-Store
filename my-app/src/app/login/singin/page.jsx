@@ -148,6 +148,7 @@ const SingIn = () => {
       .then((res) => res.json())
       .then((resData) => {
         setResPons(resData.user)
+        console.log(resPons)
         if (resData.message) {
           setAlertMsg(resData.message)
           setAlertType('success')
@@ -169,7 +170,7 @@ const SingIn = () => {
   return (
     <>
       <div className="container m-auto">
-        <NavBar {...resPons} />
+        <NavBar />
         {showAlert && (
           <Alert
             type={alertType}

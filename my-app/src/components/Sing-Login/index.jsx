@@ -1,6 +1,6 @@
 import Link from "next/link"
 const LoginSingUp = ({  }) => {
-    console.log()
+    // console.log()
     return (
         <>
             <div className="w-[334px] h-[90px] flex justify-between items-center">
