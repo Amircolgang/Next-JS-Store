@@ -16,6 +16,7 @@ const LoginSingUp = ({ props }) => {
                     href={'/login/singup'}
                 >
                 <span className="w-[196px] h-[70px] bg-[#DAEBFF] text-[20px] text-[#0075FF] rounded-b-[35px] rounded-tr-[35px] flex items-center justify-center">
+                    {props}
                 </span>
                 </Link>
             </div>
