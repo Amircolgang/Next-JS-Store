@@ -43,7 +43,7 @@ const NavBar = ({ props }) => {
                     </Link>
                 </div>
                 <div>
-                <LoginSingUp {...props} />
+                <LoginSingUp  />
                 </div>
             </div>
         </div>
