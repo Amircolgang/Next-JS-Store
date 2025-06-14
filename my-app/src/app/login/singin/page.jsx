@@ -17,7 +17,7 @@ const SingIn = ({ }) => {
       //   body: JSON.stringify(newUser),
       //   // … http://localhost:3000/login/singup
       // });
-      fetch('http://localhost:3030/api/users' , {
+      fetch('http://localhost:3030/api/login/singin' , {
             method : "POST" ,
             body : JSON.stringify(newUser)
         }).then((res) => res.json())
