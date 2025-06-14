@@ -1,7 +1,7 @@
 import Image from "next/image"
 import LoginSingUp from "../Sing-Login"
 import Link from "next/link"    
-const NavBar = ({pro }) => {
+const NavBar = ({ }) => {
     return (
         <div className="containerm m-auto">
             <div className="flex items-center justify-between">
