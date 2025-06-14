@@ -8,7 +8,7 @@ const NavBar = ({ props }) => {
     //         "User is Alredi hast"            
     //     )
     // }
-    // console.log(props)
+    console.log(username)
     return (
         <div className="containerm m-auto">
             <div className="flex items-center justify-between">
@@ -50,7 +50,7 @@ const NavBar = ({ props }) => {
                     </Link>
                 </div>
                 <div>
-                <LoginSingUp {...username}  />
+                {/* <LoginSingUp {...username}  /> */}
                 </div>
             </div>
         </div>
