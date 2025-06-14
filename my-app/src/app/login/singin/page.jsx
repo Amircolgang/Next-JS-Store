@@ -173,7 +173,7 @@ const SingIn = () => {
   return (
     <>
       <div className="container m-auto">
-        {
+      
            <NavBar {...resPons}  /> 
 
         {showAlert && (
