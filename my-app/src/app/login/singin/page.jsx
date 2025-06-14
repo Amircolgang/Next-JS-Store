@@ -174,7 +174,6 @@ const SingIn = () => {
     <>
       <div className="container m-auto">
         {
-           resPons &&
            <NavBar {...resPons}  /> 
 
         {showAlert && (
