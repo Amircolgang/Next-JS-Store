@@ -33,7 +33,7 @@ const Project = ({ }) => {
                 />
                 <div className="w-[327px] h-[106px] flex justify-between">
                   <div className="flex flex-col justify-between">
-                    <span>Name : {Object.keys(item.name)}</span>
+                    <span>Name : {Object.keys(item)}</span>
                     {/* <span>description : {item_data.description}</span> */}
                   </div>
                   <div className="w-[40px] cursor-pointer h-[39px] rounded-[25px] bg-[#1A1A1A] text-amber-200 text-4xl flex items-center justify-center">
