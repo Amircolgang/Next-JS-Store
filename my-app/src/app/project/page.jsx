@@ -6,7 +6,7 @@ const json = await db.json();
 import Header from "@/components/header";
 
 const Project = ({ }) => {
-  let titleSesionLearn  = Object.keys(json.category)
+  let titleSesionLearn  = json.category
   console.log(titleSesionLearn)
   // const item_data = item_dataFech()
   // let objectKeyinProject = []
@@ -33,7 +33,7 @@ const Project = ({ }) => {
                 />
                 <div className="w-[327px] h-[106px] flex justify-between">
                   <div className="flex flex-col justify-between">
-                    <span>Name : {item.name}</span>
+                    <span>Name : {Object.keys(item.name)}</span>
                     {/* <span>description : {item_data.description}</span> */}
                   </div>
                   <div className="w-[40px] cursor-pointer h-[39px] rounded-[25px] bg-[#1A1A1A] text-amber-200 text-4xl flex items-center justify-center">
