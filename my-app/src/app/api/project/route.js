@@ -107,6 +107,7 @@ export default async function GET() {
 try {
     return new Response(
         
+        JSON.stringify({ category })
     )
 } catch (error) {
 
