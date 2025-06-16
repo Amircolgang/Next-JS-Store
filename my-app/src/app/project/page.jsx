@@ -6,15 +6,16 @@ const json = await db.json();
 import Header from "@/components/header";
 
 const Project = ({ }) => {
-  // console.log(titleSesionLearn)
+  let titleSesionLearn  = Objectkjson.category
+  console.log(titleSesionLearn)
   // const item_data = item_dataFech()
-  let objectKeyinProject = []
-  let titleSesionLearn = []
-  let item_data = json
-  let category = item_data[0].category
-  category.map(item => objectKeyinProject.push(Object.keys(item)))
-  objectKeyinProject.map((object => titleSesionLearn.push({name : object[0]})))
-  console.log(titleSesionLearn.map(item => console.log(item.name)))
+  // let objectKeyinProject = []
+  // let titleSesionLearn = []
+  // let item_data = json
+  // let category = item_data[0].category
+  // category.map(item => objectKeyinProject.push(Object.keys(item)))
+  // objectKeyinProject.map((object => titleSesionLearn.push({name : object[0]})))
+  // console.log(titleSesionLearn.map(item => console.log(item.name)))
   return (
     <>
       <Header />
@@ -32,7 +33,7 @@ const Project = ({ }) => {
                 />
                 <div className="w-[327px] h-[106px] flex justify-between">
                   <div className="flex flex-col justify-between">
-                    <span>Name : {item[0].name}</span>
+                    <span>Name : {item.name}</span>
                     {/* <span>description : {item_data.description}</span> */}
                   </div>
                   <div className="w-[40px] cursor-pointer h-[39px] rounded-[25px] bg-[#1A1A1A] text-amber-200 text-4xl flex items-center justify-center">
