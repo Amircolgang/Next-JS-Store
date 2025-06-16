@@ -103,7 +103,7 @@ let category = [
     }
 ]
 
-export default async function GET() {
+export async function GET() {
     try {
         return new Response(
             JSON.stringify({ category })
