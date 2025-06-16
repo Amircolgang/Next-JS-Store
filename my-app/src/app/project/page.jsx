@@ -1,12 +1,12 @@
 import Image from "next/image"
 import Link from "next/link";
 let data = ""
-let db = await fetch('http://localhost:3030/api/project')
+let db = await fetch('http://localhost:3000/api/project')
 const json = await db.json();
 import Header from "@/components/header";
 
 const Project = ({ }) => {
-  console.log(db)
+  console.log(json)
   // const item_data = item_dataFech()
   // let objectKeyinProject = []
   // let titleSesionLearn = []
