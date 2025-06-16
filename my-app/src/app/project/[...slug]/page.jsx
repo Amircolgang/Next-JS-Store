@@ -1,10 +1,10 @@
-// let db = await fetch('http://localhost:3030/api/project')
-// const json = await db1.json();
+let db = await fetch('http://localhost:3000/api/project')
+const json = await db1.json();
 
 const SlugerPrudoct = ({ params }) => {
     let {slug} = params
     console.log(slug)
-    // console.log( data)        
+    console.log(json)        
     return (
     <>
         
