@@ -7,13 +7,10 @@ const SlugerPrudoct = ({ params }) => {
     let data = json
     let categoryItem = data.category
     // let data_item = json.find(item => item[0])       
+    categoryItem.map(item => console.log(Object.keys(item)))
     return (
       <>
       {
-      categoryItem.map(item => (
-        
-        <span>{Object.keys(item)}</span>
-      ))
 
       }  
     </>
