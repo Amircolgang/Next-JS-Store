@@ -1,6 +1,9 @@
 export async function GET(){
-    return new Response(
-        JSON.stringify({meesage : "Heloo"}) , 
-        {status : 200}
-    )
+    try {
+        return new Response(
+            7
+        )
+    } catch (error) {
+        
+    }
 }
