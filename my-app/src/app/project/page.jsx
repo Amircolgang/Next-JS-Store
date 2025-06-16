@@ -6,14 +6,15 @@ const json = await db.json();
 import Header from "@/components/header";
 
 const Project = ({ }) => {
+  console.log(db)
   // const item_data = item_dataFech()
-  let objectKeyinProject = []
-  let titleSesionLearn = []
-  let item_data = json
-  let category = item_data[0].category
-  category.map(item => objectKeyinProject.push(Object.keys(item)))
-  objectKeyinProject.map((object => titleSesionLearn.push({name : object[0]})))
-  console.log(titleSesionLearn.map(item => console.log(item.name)))
+  // let objectKeyinProject = []
+  // let titleSesionLearn = []
+  // let item_data = json
+  // let category = item_data[0].category
+  // category.map(item => objectKeyinProject.push(Object.keys(item)))
+  // objectKeyinProject.map((object => titleSesionLearn.push({name : object[0]})))
+  // console.log(titleSesionLearn.map(item => console.log(item.name)))
   return (
     <>
       <Header />
