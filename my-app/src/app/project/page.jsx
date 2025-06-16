@@ -38,7 +38,7 @@ const Project = ({ }) => {
                   </div>
                   <div className="w-[40px] cursor-pointer h-[39px] rounded-[25px] bg-[#1A1A1A] text-amber-200 text-4xl flex items-center justify-center">
                     <Link
-                      href={`/project/${item.name}`}
+                      href={`/project/${Object.keys(item)}`}
                     >
                       +
                     </Link>
