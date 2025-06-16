@@ -10,7 +10,9 @@ const SlugerPrudoct = ({ params }) => {
     return (
       <>
       {
-      categoryItem.map(item => console.log(Object.keys(item)))
+      categoryItem.map(item => (
+        <span>{Object.keys}</span>
+      ))
 
       }  
     </>
