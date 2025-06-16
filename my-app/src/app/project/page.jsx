@@ -6,7 +6,7 @@ const json = await db.json();
 import Header from "@/components/header";
 
 const Project = ({ }) => {
-  console.log(json)
+  console.log(json[category)
   // const item_data = item_dataFech()
   // let objectKeyinProject = []
   // let titleSesionLearn = []
