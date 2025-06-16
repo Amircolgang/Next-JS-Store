@@ -5,7 +5,7 @@ const SlugerPrudoct = ({ params }) => {
     let {slug} = params
     console.log(slug[0])
     let data = json
-    // console.log(data[slug[0]])
+    console.log(data[0])
     // let data_item = json.find(item => item[0])       
     return (
     <>
