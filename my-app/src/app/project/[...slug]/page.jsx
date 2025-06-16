@@ -4,8 +4,8 @@ const json = await db.json();
 const SlugerPrudoct = ({ params }) => {
     let {slug} = params
     console.log(slug)
-    console.log(json[category])
-    let data_item = json.find(item => item[0])       
+    let data = json
+    // let data_item = json.find(item => item[0])       
     return (
     <>
         
