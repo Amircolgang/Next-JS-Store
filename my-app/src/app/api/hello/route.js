@@ -1,6 +1,6 @@
 export async function GET(){
     try {
-        throw new Error ("Khata")
+        // throw new Error ("Khata")
         return new Response(
             JSON.stringify({message : "Ok"})    
         )
