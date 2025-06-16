@@ -7,6 +7,7 @@ import Header from "@/components/header";
 
 const Project = ({ }) => {
   let titleSesionLearn  = json.category
+  console.log(titleSesionLearn)
   // const item_data = item_dataFech()
   // let objectKeyinProject = []
   // let titleSesionLearn = []
