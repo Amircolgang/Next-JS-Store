@@ -17,4 +17,5 @@ datasource db {
 
 model User {
   id int @id @default(autoincreament())
+  email String 
 }
