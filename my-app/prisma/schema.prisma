@@ -15,3 +15,6 @@ datasource db {
 }
 
 
+model User {
+  id int 
+}
