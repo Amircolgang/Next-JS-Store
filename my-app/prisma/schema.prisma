@@ -27,6 +27,8 @@ model Post {
   title String
   content String
   author User @relation(fields: [authorId] , references: [id])
-  author Int 
+  authorId String
+  published Boolean @default(false)
   
+
 }
