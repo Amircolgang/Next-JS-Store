@@ -10,6 +10,7 @@ const SlugerPrudoct = async ({ params }) => {
     // categoryItem.map(item => console.log(Object.keys(item)))
     let product = await categoryItem[itemID]
     console.log(product)
+    
     return (
       <>
       {
