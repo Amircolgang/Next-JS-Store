@@ -16,5 +16,5 @@ datasource db {
 
 
 model User {
-  id int 
+  id int @id @default(autoincreament())
 }
