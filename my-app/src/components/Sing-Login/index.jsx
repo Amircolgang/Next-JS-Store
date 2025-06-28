@@ -24,4 +24,6 @@ const LoginSingUp = ({ props }) => {
     )
 }
 
+
+
 export default LoginSingUp
